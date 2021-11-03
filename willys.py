@@ -2,37 +2,59 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-PATH ="C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome(PATH)
+time_start = time.time()
 
-driver.get("https://www.willys.se/anvandare/inloggning")
+options = webdriver.ChromeOptions()
+# options.add_argument('--headless') 
+# options.add_argument('start-maximized') 
+options.add_argument('disable-infobars')
+options.add_argument('--disable-extensions')
+
+PATH ="C:\Program Files (x86)\chromedriver.exe"
+driver = webdriver.Chrome('drivers/chromedriver-2')
+
+driver.get("https://www.willys.se/erbjudanden/butik")
 #print(driver.title)
 
-time.sleep(2)
+time.sleep(5)
+
 
 cookietrust = driver.find_element_by_id("onetrust-reject-all-handler")
 cookietrust.click()
 
-user = driver.find_element_by_id("selenium--login-ssn-input")
-user.send_keys("200004225496")
+searchstores = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[1]/div[2]/div/div/input')
+searchstores.send_keys('Hvitfeldtsplatsen')
 
-password = driver.find_element_by_id("input_8")
-password.send_keys("Lillolga")
+time.sleep(5)
 
-#time.sleep(2)
+#store = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/ul/li/div/div[1]')
+store = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/ul/ul')
+store.click()
 
-submit = driver.find_element_by_xpath("//button[@class='ax-btn-primary md-button md-ink-ripple']")
-submit.click()
+time.sleep(5)
 
-driver.get("https://www.willys.se/erbjudanden/butik")
-time.sleep(4)
-products = driver.find_elements_by_class_name("Product_product-name__1IyPc")
-print("jello")
-#print(products)
+#showmore = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[2]/div/div/div[4]/div/button')
+#showmore.click()
+
+# driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+
+time.sleep(2)
+
+product_xpath = '//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[2]/div/div/div[3]'
+
+titleclass = 'Product_product-name__1IyPc'
+price_class = 'PriceLabel_product-price-text__3xFzK'
+
+product_grid = driver.find_element_by_xpath(product_xpath)
+product_elements = product_grid.find_elements_by_xpath('.//*')
+
+for i in product_elements: #Visar upprepat handskalade räkor
+    child = i.find_element_by_xpath('//div[contains(@class,"Product_product-name")]')
+    print(child.text)
 
 
-for product in products:
-    print(product.text)
+time.sleep(5)
+driver.quit()
 
-
-#driver.quit()
+time_end = time.time()
+print('\nRuntime: ', time_end-time_start)
