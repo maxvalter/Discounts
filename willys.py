@@ -4,19 +4,22 @@ import time
 
 time_start = time.time()
 
-options = webdriver.ChromeOptions()
-# options.add_argument('--headless') 
+options = webdriver.FirefoxOptions()
+# # options.add_argument('--headless') 
 # options.add_argument('start-maximized') 
-options.add_argument('disable-infobars')
-options.add_argument('--disable-extensions')
+# options.add_argument('disable-infobars')
+# options.add_argument('--disable-extensions')
 
-PATH ="C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome('drivers/chromedriver-2')
+driver_path = '/Users/maxadolfsson/Webb/Webscrape/PyScrape/drivers/geckodriver'
+# driver_path = '/usr/bin/safaridriver'
+
+# driver = webdriver.Chrome('drivers/chromedriver-2')
+driver = webdriver.Firefox(executable_path=driver_path)
 
 driver.get("https://www.willys.se/erbjudanden/butik")
 #print(driver.title)
 
-time.sleep(5)
+time.sleep(3)
 
 
 cookietrust = driver.find_element_by_id("onetrust-reject-all-handler")
@@ -25,7 +28,7 @@ cookietrust.click()
 searchstores = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[1]/div[2]/div/div/input')
 searchstores.send_keys('Hvitfeldtsplatsen')
 
-time.sleep(5)
+time.sleep(3)
 
 #store = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/ul/li/div/div[1]')
 store = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/ul/ul')
@@ -33,25 +36,45 @@ store.click()
 
 time.sleep(5)
 
-#showmore = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[2]/div/div/div[4]/div/button')
-#showmore.click()
+showmore = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[2]/div/div/div[4]/div/button')
+showmore.click()
 
 # driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 
-time.sleep(2)
+time.sleep(4)
 
-product_xpath = '//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[2]/div/div/div[3]'
+grid_xpath = '//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[2]/div/div/div[3]'
+product_xpath = './*'  #Relative to grid_xpath
 
-titleclass = 'Product_product-name__1IyPc'
-price_class = 'PriceLabel_product-price-text__3xFzK'
+title_xpath = './div[2]/div[1]' #Relative to product_xpath
+price_xpath = './div[1]/div[2]/div/div' #Relative to product_xpath
 
-product_grid = driver.find_element_by_xpath(product_xpath)
-product_elements = product_grid.find_elements_by_xpath('.//*')
+kronor_xpath = './span'
+öre_xpath = './div/span[1]'
+unit_xpath = './div/span[2]'
 
-for i in product_elements: #Visar upprepat handskalade räkor
-    child = i.find_element_by_xpath('//div[contains(@class,"Product_product-name")]')
-    print(child.text)
+product_grid = driver.find_element_by_xpath(grid_xpath)
+product_elements = product_grid.find_elements_by_xpath(product_xpath)
+title_elements = []# product_grid.find_elements_by_xpath(title_xpath)
 
+
+for i in range(len(product_elements)-1):
+    element = product_elements[i+1] #Skips first, not a product
+    title_element = element.find_element_by_xpath(title_xpath)
+    price_element = element.find_element_by_xpath(price_xpath)
+    kronor_element = price_element.find_element_by_xpath(kronor_xpath)
+    öre_element = price_element.find_element_by_xpath(öre_xpath)
+    unit_element = price_element.find_element_by_xpath(unit_xpath)
+
+    print(title_element.text + ": " + kronor_element.text + ',' + öre_element.text + ' ' + unit_element.text)
+
+# element = product_elements[1]
+# title_element = element.find_element_by_xpath(title_xpath)
+# price_element = element.find_element_by_xpath(price_xpath)
+# kronor_element = price_element.find_element_by_xpath(kronor_xpath)
+# öre_element = price_element.find_element_by_xpath(öre_xpath)
+
+# print(title_element.text + ": " + kronor_element.text + ',' + öre_element.text)
 
 time.sleep(5)
 driver.quit()
