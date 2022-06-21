@@ -21,7 +21,6 @@ driver.get("https://www.willys.se/erbjudanden/butik")
 
 time.sleep(3)
 
-
 cookietrust = driver.find_element_by_id("onetrust-reject-all-handler")
 cookietrust.click()
 
