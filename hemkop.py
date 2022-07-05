@@ -1,31 +1,36 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 import time
-
+import datetime
+from sympy import product
 time_start = time.time()
 
-options = webdriver.ChromeOptions()
-# options.add_argument('--headless') 
-options.add_argument('start-maximized') 
-options.add_argument('disable-infobars')
-options.add_argument('--disable-extensions')
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import csv
 
-PATH ="C:\Program Files (x86)\chromedriver.exe"
-driver = webdriver.Chrome('drivers/chromedriver-2')
+from selenium.webdriver.firefox.options import Options
 
+options = Options()
+options.headless = True
+
+driver = webdriver.Firefox(options=options, executable_path='drivers/geckodriver')
 driver.get('https://www.hemkop.se/erbjudanden')
+
+weeknumber = datetime.date.today().isocalendar()[1]
+output = open('output/hemkop_promos' + '_w' + str(weeknumber) + '.csv', 'w')
+writer = csv.writer(output)
 
 time.sleep(4)
 cookietrust = driver.find_element_by_id('onetrust-reject-all-handler')
 cookietrust.click()
 
+time.sleep(2)
 storeselect = driver.find_element_by_class_name('md-select-value')
 storeselect.click()
 
 time.sleep(2)
 
-storesearch = driver.find_element_by_xpath('//*[@id="select_container_13"]/md-select-menu/md-content/md-select-header/form/input')
-storesearch.send_keys('Linnégatan')
+storesearch = driver.find_element_by_xpath('/html/body/div[7]/md-select-menu/md-content/md-select-header/form/input')
+storesearch.send_keys('Göteborg Vasagatan')
 
 time.sleep(1)
 resultmenu = driver.find_element_by_class_name('store-select-header') #Elementet innan butiklänken
@@ -37,34 +42,38 @@ time.sleep(2)
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 time.sleep(1)
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+time.sleep(1)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+time.sleep(1)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+time.sleep(1)
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-
-
 time.sleep(3)
-product_grid = driver.find_element_by_xpath('//*[@id="selenium--main-content-wrapper"]/div/ui-view/div/div[2]/div/div/ax-promotion/div/div[2]/div[2]/ax-productdisplay/div/div')
-product_elements = product_grid.find_elements_by_xpath('./*')
+grid_xpath = '/html/body/div[3]/div[6]/div/ui-view/div/div[2]/div/div/ax-promotion/div/div[2]/div[2]/ax-productdisplay/div/div[1]'
 
-info_class_name = 'product-puff-body'
+grid = driver.find_element_by_xpath(grid_xpath)
+product_elements = grid.find_elements_by_xpath('./*')
+
+
+print(len(product_elements))
 
 #Xpaths relative to product
 info_xpath = './ax-product-puff/div/div[3]'
 title_xpath = './ax-product-puff/div/div[3]/div/div[2]/a'
-price_xpath = './ax-product-puff/div/div[1]/ax-promotion-label/div/div/div'
-compareprice_xpath = './ax-product-puff/div/div[3]/div/ax-product-pricelabel/div/div[1]/span[1]'
-
-#Xpaths relative to price element
-unit_xpath = './div'
+price_xpath = './ax-product-puff/div/div[1]/ax-promotion-label/div/div'
+desc_xpath = './ax-product-puff/div/div[3]/div/div[3]'
+# compareprice_xpath = './ax-product-puff/div/div[3]/div/ax-product-pricelabel/div/div[1]/span[1]'
 
 for i in product_elements:
-    title = i.find_element_by_xpath(title_xpath)
-    price = i.find_element_by_xpath(price_xpath)
-
-    unit = price.find_element_by_xpath(unit_xpath)
+    title_elem = i.find_element_by_xpath(title_xpath)
+    price_elem = i.find_element_by_xpath(price_xpath)
+    desc_elem = i.find_element_by_xpath(desc_xpath)
     
-    compareprice = i.find_element_by_xpath(compareprice_xpath)
+    product_data = [title_elem.text, price_elem.text, desc_elem.text]
+    writer.writerow(product_data)
+    print(title_elem.text, price_elem.text, desc_elem.text, "\n")
 
-    print(title.text, price.text, compareprice.text, "\n")
-
+driver.quit()
 time_end = time.time()
 print('\nRuntime: ', time_end-time_start)
