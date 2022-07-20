@@ -6,6 +6,7 @@ import datetime
 # Yet another example of showing CSV data in Table
 
 weeknumber = datetime.date.today().isocalendar()[1]
+year = datetime.date.today().year
 
 def fetch_table_data(csv_path):
     if csv_path is not None:
@@ -38,6 +39,7 @@ def table_example():
     
     hemkop_list = fetch_table_data(curr_hemkop_path)
     hemkop_header = ['column' + str(x) for x in range(len(hemkop_list[0]))]
+    table_header = ['Vara', 'Pris', 'Beskrivning']
 
     coop_list = fetch_table_data(curr_coop_path)
     coop_header = ['column' + str(x) for x in range(len(hemkop_list[0]))] 
@@ -58,23 +60,36 @@ def table_example():
     #         sg.popup_error('Error reading file')
     #         return
 
-    layout = [
-        [sg.Table(values=hemkop_list,
-                  headings=hemkop_header,
+    store_title_font = ('Helvetica', 17)
+
+    title_font = ('Helvetica', 25)
+
+    hemkop_table = sg.Table(values=hemkop_list,
+                  headings=table_header,
                   display_row_numbers=False,
                   auto_size_columns=True,
-                  num_rows=max(25, len(hemkop_list))),
-        sg.Table(values=coop_list,
-                  headings=coop_header,
+                  num_rows=max(25, len(hemkop_list)))
+
+    coop_table = sg.Table(values=coop_list,
+                  headings=table_header,
                   display_row_numbers=False,
                   auto_size_columns=True,
-                  num_rows=max(25, len(coop_list))),
-        sg.Table(values=willys_list,
-                  headings=willys_header,
+                  num_rows=max(25, len(coop_list)))
+
+    willys_table = sg.Table(values=willys_list,
+                  headings=table_header,
                   display_row_numbers=False,
                   auto_size_columns=True,
                   num_rows=max(25, len(willys_list)))
-      ]
+    
+    willys_column = [[sg.Text("Willys", font =store_title_font)], [willys_table],]
+
+    hemkop_column = [[sg.Text('Hemköp', font=store_title_font)], [hemkop_table],]
+
+    coop_column = [[sg.Text('Coop', font=store_title_font)], [coop_table]]
+
+    layout = [[sg.Text('Rabatter vecka ' + str(weeknumber) + ' ' + str(year), font=title_font)],
+        [sg.Column(willys_column), sg.Column(hemkop_column), sg.Column(coop_column, vertical_alignment='top')]
     ]
 
     window = sg.Window('RabattApp', layout, size=(1200,700 ), grab_anywhere=True)
