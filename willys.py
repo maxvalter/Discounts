@@ -11,7 +11,7 @@ import datetime
 
 
 options = Options()
-options.headless = True
+options.headless = False
 
 driver = webdriver.Firefox(options=options, executable_path='drivers/geckodriver')
 # driver_path = '/usr/bin/safaridriver'
@@ -83,16 +83,15 @@ for i in range(len(product_elements)-1):
         price_info = price_info + child.text + ' '
 
 
-
     # kronor_element = price_element.find_element_by_xpath(kronor_xpath)
     # öre_element = price_element.find_element_by_xpath(öre_xpath)
     # unit_element = price_element.find_element_by_xpath(unit_xpath)
 
-    product_data = [title_element.text, price_info, desc_element.text]
+    product_data = [title_element.text, price_info.replace('\n', ' '), desc_element.text.replace('\n', ' ')]
     writer.writerow(product_data)
 
-    print('\n' + title_element.text + ": " + price_info + ' ' 
-     + desc_element.text)
+    print('\n' + title_element.text + ": " + repr(price_info.replace('\n', ' ')) + ' ' 
+     + repr(desc_element.text))
 
 # element = product_elements[1]
 # title_element = element.find_element_by_xpath(title_xpath)

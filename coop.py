@@ -49,7 +49,7 @@ def fetch_info_from_elements(elements):
 
 #Init
 options = Options()
-options.headless = True
+options.headless = False
 
 driver = webdriver.Firefox(options=options, executable_path='drivers/geckodriver')
 driver.get('https://www.coop.se/butiker-erbjudanden/coop/coop-landala/')
