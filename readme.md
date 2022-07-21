@@ -1,1 +1,3 @@
-Run main.py, then gui.py
+#DiscScrape
+
+Run main.py, then simplegui.py
