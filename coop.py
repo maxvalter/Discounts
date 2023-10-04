@@ -9,54 +9,70 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
 
-def fetch_info_from_elements(elements):
-
-    #Xpaths relative to element
-    desc_elem_xpath = ".//p[contains(@class, 'ItemTeaser-description')]"
-    name_elem_xpath = ".//h3[contains(@class, 'ItemTeaser-heading')]"
-
-    price_splash_xpath = ".//p[contains(@class, 'Splash')]"
-    splash_children_xpath = ".//span[contains(@class, 'Splash-content ')]/*"
-    
-    #relative to splash 
-    largevalue_elem_xpath = ".//span[contains(@class, 'Splash-priceLarge')]"
-    smallvalue_elem_xpath = "./span/span[3]/span[2]"
-
-    names = []
-    prices = []
-    brands = []
-
-
-
-    for elem in elements:
-        name_elem = elem.find_element(by=By.XPATH, value=name_elem_xpath)
-        desc_elem = elem.find_element(by=By.XPATH, value=desc_elem_xpath)
-        
-
-        splash_children = elem.find_elements(by=By.XPATH, value=splash_children_xpath)
-        price_info = ""
-        
-        for child in splash_children:
-            if len(child.text) >= 1:
-                price_info = price_info + child.text + ' '
-        
-        product_data = [name_elem.text, price_info, desc_elem.text]
-        writer.writerow(product_data)
-
-        print(name_elem.text + ', ' + desc_elem.text)
-        print('\n' + price_info)
-
-
 #Init
 options = Options()
 options.headless = False
 
+
+def get_price(article):
+    try:
+        price_elem = article.find_element_by_xpath(price1_xpath)
+    except:
+        price_elem = article.find_element_by_xpath(price2_xpath)
+    
+    price_text = price_elem.text
+    price_text = price_text.replace('\n', ' ')
+    return price_text
+
+def get_weight(article):
+    try:
+        weight_elem = article.find_element(by=By.XPATH, value=weight_xpath)
+        return weight_elem.text
+    except: 
+        print('no_weight')
+        return None
+        # desc_elem = i.find_element(by=By.XPATH, value=desc_xpath)
+
+
+def data_from_spoiler(article,spoiler_xpath,grid):
+    spoiler_button = article.find_element_by_xpath(spoiler_xpath)
+    spoiler_button.click()
+    time.sleep(0.5)
+    spoiled_article = grid.find_element(by=By.XPATH, value=spoiled_children_xpath)
+    data = data_from_article(spoiled_article)
+
+    spoiler_button.click()
+    return data
+
+def data_from_article(article):
+    #Spoiled stängd
+    data = [article.find_element_by_xpath(title_xpath).text.replace('\n', ' '),
+        get_price(article),
+        article.find_element_by_xpath(desc_xpath).text]
+
+    print(data)
+    return data
+
+def data_from_grid(grid):
+    data = []
+    for article in grid.find_elements_by_xpath(grid_children_xpath):
+        try:
+            data.append(data_from_spoiler(article,spoiler_xpath,grid))
+        except:
+            data.append(data_from_article(article))
+    return data
+
+def write_from_grid(grid):
+    data = data_from_grid(grid)
+    writer.writerows(data)
+
 driver = webdriver.Firefox(options=options, executable_path='drivers/geckodriver')
 driver.get('https://www.coop.se/butiker-erbjudanden/coop/coop-landala/')
 
-
 weeknumber = datetime.date.today().isocalendar()[1]
 output = open('output/coop_promos' + '_w' + str(weeknumber) + '.csv', 'w')
+
+global writer
 writer = csv.writer(output)
 
 #Reject cookies
@@ -64,81 +80,169 @@ reject_cookies_xpath = '//*[@id="cmpwelcomebtnno"]/a'
 reject_cookies = driver.find_element(by=By.XPATH, value=reject_cookies_xpath)
 reject_cookies.click()
 
+#---
+#Log-in
+time.sleep(3)
+login_xpath = '/html/body/main/div[2]/div[2]/div[1]/div/div/div[2]/h3/a'
+login_element = driver.find_element(by=By.XPATH, value=login_xpath)
+login_element.click()
 
-#Find body
-body_xpath = '/html/body/main/div[2]/div/div[1]/div/div/div[6]'
-body_element = driver.find_element(by=By.XPATH, value=body_xpath)
+#Fill form
+time.sleep(2.5)
+email_xpath = '//*[@id="loginEmail"]'
+pass_xpath = '//*[@id="loginPassword"]'
+email_input = driver.find_element(by=By.XPATH, value=email_xpath)
+pass_input = driver.find_element(by=By.XPATH, value=pass_xpath)
+email_input.send_keys('hejdetarmax@gmail.com')
+pass_input.send_keys('lillolga')
+
+submit_xpath = '/html/body/div/div/div/form/footer/button'
+submit_button = driver.find_element(by=By.XPATH, value=submit_xpath)
+submit_button.click()
+
+# #Find body
+# time.sleep(1)
+# body_xpath = '/html/body/main/div[2]/div[2]/div[3]/div/div[2]/div/div'
+# body_element = driver.find_element(by=By.XPATH, value=body_xpath)
 
 #Find category-grids
-grids_xpath = '/html/body/main/div[2]/div/div[1]/div/div/div[6]/*'
-grids = driver.find_elements(by=By.XPATH, value=grids_xpath)
-grids.pop(0)
+time.sleep(2)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+time.sleep(1)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+time.sleep(1)
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-print("This week has " + str(len(grids)) + " categories")
+student_grid_xpath = '/html/body/main/div[2]/div[2]/div[1]/div/div[2]'
 
-#Click on all "show more" buttons (Xpath relative to body)
+s_grid = driver.find_element(by=By.XPATH, value=student_grid_xpath)
+s_grid_elems_pop = s_grid.find_elements(by=By.XPATH, value='./div')
+s_grid_elems = s_grid_elems_pop[1:]
 
-showmore_xpath = ".//button[contains(text(),'Visa fler')]"
-showmore_elements = body_element.find_elements(by=By.XPATH, value=showmore_xpath)
+s_disc_xpath = './article/div/div[2]/div[2]/div/div/p/span/span[1]'
+s_info_class = 'ItemTeaser-info'
+#Relative to info_box
+s_title_xpath = './h3'
+s_desc_xpath = './div'
 
-
-for i in showmore_elements:
-    i.click()
-    time.sleep(1)
-
-
-#Relative to category-grid
-grid_children_xpath = ".//article[contains(@class, 'ItemTeaser')]"
-
-for grid in grids:
-    grid_index = 1
-
-    print("\nscanning grid " + str(grid_index) + "...")
-    grid_index = grid_index + 1
-
-    grid_elements = grid.find_elements(by=By.XPATH, value=grid_children_xpath)
-    print("This grid has " + str(len(grid_elements)) + " elements")
-
-    fetch_info_from_elements(grid_elements)
+writer.writerow(['Personliga:', '', ''])
 
 
-# #Xpaths for each category-grid, relative to body
-# grid1_xpath = './div[1]'
-# grid2_xpath = './div[2]' 
-# grid3_xpath = './div[3]'
-# grid4_xpath = './div[4]' 
+for i in s_grid_elems:
+    #Testa första info_xpath, annars byt till nästa, bara en exception.
+    s_disc = i.find_element(by=By.XPATH, value=s_disc_xpath)
+    info_box = i.find_element(by=By.CLASS_NAME, value=s_info_class)
+    # try:
+    #     info_box = i.find_element(by=By.XPATH, value=s_info_xpath)
+    # except: 
+    #     info_box = i.find_element(by=By.XPATH, value=s_info_xpath2)
+    #     #Static change
+    #     s_info_xpath = s_info_xpath2
 
-# grid_children_xpath = ".//article[contains(@class, 'ItemTeaser')]"
+    s_title = info_box.find_element(by=By.XPATH, value=s_title_xpath)
+    s_desc = info_box.find_element(by=By.XPATH, value=s_desc_xpath)
 
-# #Frukt och grönt
-# grid2 = body_element.find_element(by=By.XPATH, value=grid2_xpath)
-# grid2_elements = grid2.find_elements(by=By.XPATH, value=grid_children_xpath)
-# print('\nfrukt och grönt: ' + str(len(grid2_elements)) + ' erbjudanden')
-# fetch_info_from_elements(grid2_elements)
+    product_data = [s_title.text, s_disc.text, s_desc.text]
+    writer.writerow(product_data)
+    print(product_data, "\n")
+    # print(i.text)
 
-# #Kött
-# grid3 = body_element.find_element(by=By.XPATH, value=grid3_xpath)
-# grid3_elements = grid3.find_elements(by=By.XPATH, value=grid_children_xpath)
-# print('\nKött, färdigmat: ' + str(len(grid3_elements)) + ' erbjudanden')
-# fetch_info_from_elements(grid3_elements)
+writer.writerow(['', '', ''])
 
-# #Mejeri
-# grid4 = body_element.find_element(by=By.XPATH, value=grid4_xpath)
-# grid4_elements = grid4.find_elements(by=By.XPATH, value=grid_children_xpath)
-# print('\nMejeri: ' + str(len(grid4_elements)) + ' erbjudanden')
-# fetch_info_from_elements(grid4_elements)
+#---RESTEN---
 
-# #Dryck
-# grid5 = body_element.find_element(by=By.XPATH, value=grid5_xpath)
-# grid5_elements = grid5.find_elements(by=By.XPATH, value=grid_children_xpath)
-# print('\nDryck: ' + str(len(grid5_elements)) + ' erbjudanden')
-# fetch_info_from_elements(grid5_elements)
+other_grids1 = '/html/body/main/div[2]/div[2]/div[3]'
+other_grids2 = '/html/body/main/div[2]/div[2]/div[2]'
 
-# #Övrigt
-# grid6 = body_element.find_element(by=By.XPATH, value=grid6_xpath)
-# grid6_elements = grid6.find_elements(by=By.XPATH, value=grid_children_xpath)
-# print('\nÖvrigt: ' + str(len(grid6_elements)) + ' erbjudanden')
-# fetch_info_from_elements(grid6_elements)
+
+# grid1_xpath = '/html/body/main/div[2]/div[2]/div[3]/div/div[2]/div/div'
+# grid1 = driver.find_element(by=By.XPATH, value=grid1_xpath)
+
+grids = driver.find_element(by=By.XPATH, value=other_grids2)
+
+#Relative to gridS
+grid_xpath = './*'
+grids_elems = grids.find_elements(by=By.XPATH, value=grid_xpath)
+
+#Relative to grid
+global grid_children_xpath, button_xpath
+grid_children_xpath = './div[2]/div/div/div/article'
+button_xpath = './div[3]/button'
+spoiled_children_xpath = './/div[@class="swiper-wrapper"]//article'
+
+#Relative to article
+global price1_xpath, price2_xpath, title_xpath, weight_xpath, desc_xpath, spoiler_xpath, spoiled_elements
+price1_xpath = './div/div[1]/div[3]/div/div/p/span'
+price2_xpath = './div/div[1]/div[2]/div/div/p/span'
+title_xpath = './div/div[2]/div[1]'
+weight_xpath =  './div/div[2]/div[1]/div/div'
+desc_xpath = './div/div[2]/div[2]/div[3]'
+spoiler_xpath = './/button[contains(text(), "Visa")]'
+spoiled_elements_xpath = '../div[@class="Grid-cell u-sizeFull u-paddingAz"]/div/div/div/div/div/div/div/div/article'
+
+for grid in grids_elems:
+    
+    product_data = data_from_grid(grid)
+
+    writer.writerows(product_data)
+    print(product_data, "\n")
+    # try:
+    #     button = grid.find_element(by=By.XPATH, value=button_xpath)
+    #     button.click()
+    # except: 
+    #     print('no_button')
+    
+    # grid_children = grid.find_elements(by=By.XPATH, value=grid_children_xpath)
+    # for article in grid_children:    
+    #     title_elem = article.find_element_by_xpath(title_xpath)
+
+    #     try:
+    #         spoiler = article.find_element(by=By.XPATH, value=spoiler_xpath)
+    #         spoiler.click()
+    #         spoiled = article.find_elements(by=By.XPATH, value=spoiled_elements)
+
+    #     except: 
+    #         print('no_spoiler')
+
+
+
+        # try:
+        #     price_elem = article.find_element_by_xpath(price1_xpath)
+        # except:
+        #     price_elem = article.find_element_by_xpath(price2_xapth)
+        
+        # price_text = price_elem.text
+        # price_text = price_text.replace('\n', ' ')
+
+
+        # try:
+        #     weight_elem = article.find_element(by=By.XPATH, value=weight_xpath)
+        # except: 
+        #     print('no_weight')
+        # # desc_elem = i.find_element(by=By.XPATH, value=desc_xpath)
+
+
+# for i in grid_elements:
+#     title_elem = i.find_element_by_xpath(title_xpath)
+#     try:
+#         price_elem = i.find_element_by_xpath(price1_xpath)
+#     except:
+#         price_elem = i.find_element_by_xpath(price2_xapth)
+
+#     try:
+#         weight_elem = i.find_element(by=By.XPATH, value=weight_xpath)
+#     except: 
+#         print('no_weight')
+#     # desc_elem = i.find_element(by=By.XPATH, value=desc_xpath)
+
+#     product_data =[title_elem.text, price_elem.text, weight_elem.text] 
+#     writer.writerow(product_data)
+#     print(product_data, "\n")
+
+
+
+
+
 
 driver.quit()
 

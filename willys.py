@@ -11,7 +11,7 @@ import datetime
 
 
 options = Options()
-options.headless = False
+options.headless = True
 
 driver = webdriver.Firefox(options=options, executable_path='drivers/geckodriver')
 # driver_path = '/usr/bin/safaridriver'

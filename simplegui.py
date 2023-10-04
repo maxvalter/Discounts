@@ -52,7 +52,7 @@ def main():
 
     store_title_font = ('Helvetica', 17)
 
-    title_font = ('Helvetica', 25)
+    title_font = ('Helvetica', 25, 'bold')
     table_header = ['Vara', 'Pris', 'Beskrivning']
 
     #Create table elements
@@ -61,7 +61,7 @@ def main():
     willys_table = create_table(willys_list)
     
     #Build titled columns 
-    willys_column = sg.Column([[sg.Text("Willys", font =store_title_font)], 
+    willys_column = sg.Column([[sg.Text("WILLY:S", font =store_title_font)], 
                                 [willys_table]], vertical_alignment='top')
     hemkop_column = sg.Column([[sg.Text('Hemköp', font=store_title_font)], 
                                 [hemkop_table]], vertical_alignment='top')
