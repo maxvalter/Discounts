@@ -18164,3 +18164,532 @@ JavaScript warning: https://www.coop.se/Assets/Build/coopse.script.storesApp.f9e
 Kt@https://www.coop.se/Assets/Build/coopse.script.storesApp.f9e6bf11.js:2:170761
 
 1696407564801	Marionette	INFO	Stopped listening on port 50877
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1696918266422	geckodriver	INFO	Listening on 127.0.0.1:56185
+1696918266847	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "56186" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileCPBHLc"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1696918267573	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-10 08:11:07.771 plugin-container[45639:1118272] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:07.771 plugin-container[45639:1118272] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1696918267773	Marionette	INFO	Listening on port 56207
+2023-10-10 08:11:07.774 plugin-container[45639:1118272] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:07.774 plugin-container[45639:1118272] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 08:11:07.774 plugin-container[45639:1118275] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:07.774 plugin-container[45639:1118275] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:56186
+Read port: 56207
+1696918267932	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+DevTools listening on ws://127.0.0.1:56186/devtools/browser/7d801221-88a8-4f6f-9006-6b4d400e0845
+2023-10-10 06:11:08.845 plugin-container[45642:1118423] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:08.845 plugin-container[45642:1118423] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 06:11:08.848 plugin-container[45642:1118423] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:08.848 plugin-container[45642:1118423] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 06:11:08.848 plugin-container[45642:1118426] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:08.848 plugin-container[45642:1118426] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript error: https://www.willys.se/_next/static/chunks/framework-21d52f6c24784cc0.js, line 25: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+JavaScript error: https://www.willys.se/_next/static/chunks/framework-21d52f6c24784cc0.js, line 25: Error: Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+1696918282548	Marionette	INFO	Stopped listening on port 56207
+JavaScript warning: https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f, line 6: Script terminated by timeout at:
+e.exports</Cn/<@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:99755
+e.exports</Cn/<@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:99738
+Cn@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:99891
+e.exports</Nn/u<@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:104464
+Nn@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:104600
+e.exports</lt/</</<@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:135517
+e.exports</e.try@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:69076
+e.exports</lt/</</<@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:135309
+e.exports</lt/</<@https://files.imbox.io/widget-v2/prod/widget.js?v=7fc4e7f:6:135564
+nrWrapper@https://www.willys.se/erbjudanden/butik:2:15673
+
+1696918283327	geckodriver	INFO	Listening on 127.0.0.1:56446
+1696918283843	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "56447" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileqvCSse"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1696918284139	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-10 08:11:24.302 plugin-container[45656:1119228] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:24.303 plugin-container[45656:1119228] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 08:11:24.305 plugin-container[45656:1119228] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:24.305 plugin-container[45656:1119228] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 08:11:24.306 plugin-container[45656:1119235] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:24.306 plugin-container[45656:1119235] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1696918284318	Marionette	INFO	Listening on port 56463
+WebDriver BiDi listening on ws://127.0.0.1:56447
+Read port: 56463
+1696918284487	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+2023-10-10 06:11:25.221 plugin-container[45659:1119387] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:25.221 plugin-container[45659:1119387] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 06:11:25.223 plugin-container[45659:1119387] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:25.223 plugin-container[45659:1119387] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 06:11:25.223 plugin-container[45659:1119386] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:25.223 plugin-container[45659:1119386] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:56447/devtools/browser/905ca34a-5035-48f0-8588-33b3b9ed1335
+1696918307189	geckodriver	INFO	Listening on 127.0.0.1:56780
+1696918307708	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "56781" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileUbaAiH"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1696918308003	Marionette	INFO	Marionette enabled
+2023-10-10 08:11:48.167 plugin-container[45670:1120010] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:48.167 plugin-container[45670:1120010] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-10 08:11:48.170 plugin-container[45670:1120010] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:48.171 plugin-container[45670:1120010] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 08:11:48.171 plugin-container[45670:1120018] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 08:11:48.171 plugin-container[45670:1120018] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1696918308184	Marionette	INFO	Listening on port 56797
+WebDriver BiDi listening on ws://127.0.0.1:56781
+Read port: 56797
+1696918308366	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+2023-10-10 06:11:49.136 plugin-container[45677:1120186] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:49.136 plugin-container[45677:1120186] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 06:11:49.138 plugin-container[45677:1120186] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:49.139 plugin-container[45677:1120186] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-10 06:11:49.139 plugin-container[45677:1120188] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-10 06:11:49.139 plugin-container[45677:1120188] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:56781/devtools/browser/826ad90b-8554-495b-bda8-6883c7fc1752
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+1697534494470	geckodriver	INFO	Listening on 127.0.0.1:57084
+1697534494959	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "57085" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileCKK7Ip"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697534506390	Marionette	INFO	Marionette enabled
+2023-10-17 11:21:46.621 plugin-container[32788:1280507] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:21:46.622 plugin-container[32788:1280507] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1697534506706	Marionette	INFO	Listening on port 57092
+2023-10-17 11:21:46.718 plugin-container[32788:1280507] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:21:46.718 plugin-container[32788:1280507] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:21:46.718 plugin-container[32788:1280511] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:21:46.718 plugin-container[32788:1280511] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:57085
+Read port: 57092
+1697534506851	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+2023-10-17 09:21:47.706 plugin-container[32797:1280717] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:21:47.706 plugin-container[32797:1280717] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:21:47.709 plugin-container[32797:1280717] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:21:47.709 plugin-container[32797:1280717] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:21:47.709 plugin-container[32797:1280715] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:21:47.709 plugin-container[32797:1280715] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:57085/devtools/browser/62151744-d581-4681-aef1-f5380a473476
+JavaScript error: https://www.willys.se/_next/static/chunks/framework-21d52f6c24784cc0.js, line 25: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+JavaScript error: https://www.willys.se/_next/static/chunks/framework-21d52f6c24784cc0.js, line 25: Error: Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
+1697534521169	Marionette	INFO	Stopped listening on port 57092
+JavaScript warning: https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d, line 6: Script terminated by timeout at:
+fn@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:90319
+e.exports</Cn/<@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:99766
+e.exports</Cn/<@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:99738
+Cn@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:99891
+e.exports</Nn/u<@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:104464
+Nn@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:104600
+e.exports</lt/</</<@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:135517
+e.exports</e.try@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:69076
+e.exports</lt/</</<@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:135309
+e.exports</lt/</<@https://files.imbox.io/widget-v2/prod/widget.js?v=89c2a7d:6:135564
+nrWrapper@https://www.willys.se/erbjudanden/butik:2:15756
+
+1697534522157	geckodriver	INFO	Listening on 127.0.0.1:57145
+1697534522678	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "57146" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileHAM0ln"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697534522984	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-17 11:22:03.161 plugin-container[32802:1281613] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:22:03.161 plugin-container[32802:1281613] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:22:03.164 plugin-container[32802:1281613] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:22:03.164 plugin-container[32802:1281613] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:22:03.165 plugin-container[32802:1281617] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:22:03.165 plugin-container[32802:1281617] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1697534523173	Marionette	INFO	Listening on port 57153
+WebDriver BiDi listening on ws://127.0.0.1:57146
+Read port: 57153
+1697534523322	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+2023-10-17 09:22:04.094 plugin-container[32805:1281775] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:22:04.094 plugin-container[32805:1281775] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:22:04.096 plugin-container[32805:1281775] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:22:04.096 plugin-container[32805:1281775] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:22:04.096 plugin-container[32805:1281777] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:22:04.096 plugin-container[32805:1281777] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:57146/devtools/browser/b5f4feae-b430-4ad3-acac-ceca3fdf9978
+1697534547664	geckodriver	INFO	Listening on 127.0.0.1:57204
+1697534548184	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "57205" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileuBbU7R"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697534548500	Marionette	INFO	Marionette enabled
+2023-10-17 11:22:28.664 plugin-container[32812:1282385] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:22:28.664 plugin-container[32812:1282385] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-17 11:22:28.667 plugin-container[32812:1282385] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:22:28.667 plugin-container[32812:1282385] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:22:28.668 plugin-container[32812:1282389] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:22:28.668 plugin-container[32812:1282389] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1697534548683	Marionette	INFO	Listening on port 57212
+WebDriver BiDi listening on ws://127.0.0.1:57205
+Read port: 57212
+1697534548812	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+2023-10-17 09:22:29.612 plugin-container[32815:1282546] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:22:29.612 plugin-container[32815:1282546] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:57205/devtools/browser/1c54d4bc-2867-4a53-a11c-9168d1783ed6
+2023-10-17 09:22:29.614 plugin-container[32815:1282546] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:22:29.614 plugin-container[32815:1282546] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:22:29.614 plugin-container[32815:1282550] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:22:29.614 plugin-container[32815:1282550] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+1697534722151	geckodriver	INFO	Listening on 127.0.0.1:58468
+1697534722674	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "58469" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileyCtObH"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697534723001	Marionette	INFO	Marionette enabled
+2023-10-17 11:25:23.169 plugin-container[33188:1285552] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:25:23.169 plugin-container[33188:1285552] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-17 11:25:23.171 plugin-container[33188:1285552] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:25:23.171 plugin-container[33188:1285552] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:25:23.172 plugin-container[33188:1285558] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:25:23.172 plugin-container[33188:1285558] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1697534723187	Marionette	INFO	Listening on port 58488
+Read port: 58488
+WebDriver BiDi listening on ws://127.0.0.1:58469
+1697534723242	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+2023-10-17 09:25:24.134 plugin-container[33191:1285723] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:25:24.134 plugin-container[33191:1285723] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:25:24.136 plugin-container[33191:1285723] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:25:24.136 plugin-container[33191:1285723] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:25:24.136 plugin-container[33191:1285724] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:25:24.136 plugin-container[33191:1285724] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:58469/devtools/browser/a99d6c74-924f-41bf-b2cd-b882f4b2d0a3
+1697534733208	geckodriver	INFO	Listening on 127.0.0.1:58654
+1697534733732	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "58655" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileeYs0TJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697534734136	Marionette	INFO	Marionette enabled
+2023-10-17 11:25:34.260 plugin-container[33215:1286054] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:25:34.260 plugin-container[33215:1286054] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:25:34.263 plugin-container[33215:1286054] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:25:34.263 plugin-container[33215:1286054] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:25:34.263 plugin-container[33215:1286059] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:25:34.263 plugin-container[33215:1286059] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1697534734377	Marionette	INFO	Listening on port 58674
+WebDriver BiDi listening on ws://127.0.0.1:58655
+Read port: 58674
+1697534734588	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:58655/devtools/browser/19395b2b-b65d-4056-8d48-e23cf240a0af
+2023-10-17 09:25:36.116 plugin-container[33219:1286241] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:25:36.117 plugin-container[33219:1286241] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:25:36.122 plugin-container[33219:1286241] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:25:36.122 plugin-container[33219:1286241] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:25:36.123 plugin-container[33219:1286255] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:25:36.123 plugin-container[33219:1286255] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1697534799501	geckodriver	INFO	Listening on 127.0.0.1:59506
+1697534800025	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "-headless" "--remote-debugging-port" "59507" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofilelhYPD2"
+*** You are running in headless mode.
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697534800333	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-17 11:26:40.502 plugin-container[33265:1287624] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:26:40.502 plugin-container[33265:1287624] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:26:40.505 plugin-container[33265:1287624] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:26:40.505 plugin-container[33265:1287624] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:26:40.505 plugin-container[33265:1287626] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:26:40.505 plugin-container[33265:1287626] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1697534800520	Marionette	INFO	Listening on port 59523
+WebDriver BiDi listening on ws://127.0.0.1:59507
+Read port: 59523
+1697534800674	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+2023-10-17 09:26:41.437 plugin-container[33268:1287782] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:26:41.437 plugin-container[33268:1287782] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:26:41.439 plugin-container[33268:1287782] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:26:41.439 plugin-container[33268:1287782] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:26:41.439 plugin-container[33268:1287787] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:26:41.440 plugin-container[33268:1287787] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:59507/devtools/browser/2cd14e9f-0cfe-4f95-a3b3-392ef88a55bc
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+1697534836526	Marionette	INFO	Stopped listening on port 58674
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1697534906705	geckodriver	INFO	Listening on 127.0.0.1:60842
+1697534907229	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "60843" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofiledsItJK"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697534907627	Marionette	INFO	Marionette enabled
+2023-10-17 11:28:27.757 plugin-container[33325:1289315] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:28:27.757 plugin-container[33325:1289315] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:28:27.760 plugin-container[33325:1289315] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:28:27.760 plugin-container[33325:1289315] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:28:27.760 plugin-container[33325:1289313] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:28:27.760 plugin-container[33325:1289313] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1697534907874	Marionette	INFO	Listening on port 60861
+WebDriver BiDi listening on ws://127.0.0.1:60843
+Read port: 60861
+1697534908097	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2023-10-17 09:28:29.043 plugin-container[33329:1289480] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:28:29.043 plugin-container[33329:1289480] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:28:29.045 plugin-container[33329:1289480] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:28:29.045 plugin-container[33329:1289480] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:28:29.045 plugin-container[33329:1289481] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:28:29.045 plugin-container[33329:1289481] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:60843/devtools/browser/11f5627d-ef50-4302-8189-a9eba3774867
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+1697535207628	geckodriver	INFO	Listening on 127.0.0.1:64753
+1697535208144	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "64754" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileXsQKDa"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697535208479	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-17 11:33:28.681 plugin-container[33373:1291355] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:33:28.681 plugin-container[33373:1291355] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:33:28.684 plugin-container[33373:1291355] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:33:28.685 plugin-container[33373:1291355] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:33:28.685 plugin-container[33373:1291353] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:33:28.685 plugin-container[33373:1291353] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1697535208706	Marionette	INFO	Listening on port 64771
+WebDriver BiDi listening on ws://127.0.0.1:64754
+Read port: 64771
+1697535208869	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js, line 2: Script terminated by timeout at:
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71177
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+setTimeout handler*I@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71165
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71178
+
+1697535209152	Marionette	INFO	Stopped listening on port 60861
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+DevTools listening on ws://127.0.0.1:64754/devtools/browser/9a3d897c-9d02-4dd5-9351-4b36058d8984
+2023-10-17 09:33:30.043 plugin-container[33376:1291589] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:33:30.043 plugin-container[33376:1291589] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:33:30.046 plugin-container[33376:1291589] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:33:30.046 plugin-container[33376:1291589] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:33:30.046 plugin-container[33376:1291591] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:33:30.046 plugin-container[33376:1291591] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+1697535379228	geckodriver	INFO	Listening on 127.0.0.1:50680
+1697535379747	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "50681" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofilekLa7mN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697535380131	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-17 11:36:20.254 plugin-container[33413:1292728] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:36:20.255 plugin-container[33413:1292728] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:36:20.257 plugin-container[33413:1292728] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:36:20.257 plugin-container[33413:1292728] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:36:20.257 plugin-container[33413:1292726] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:36:20.257 plugin-container[33413:1292726] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1697535380282	Marionette	INFO	Listening on port 50698
+WebDriver BiDi listening on ws://127.0.0.1:50681
+Read port: 50698
+1697535380485	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50681/devtools/browser/6fade17b-93ff-40fe-ba5c-de84b76c7ab4
+2023-10-17 09:36:21.416 plugin-container[33416:1292896] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:36:21.416 plugin-container[33416:1292896] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:36:21.419 plugin-container[33416:1292896] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:36:21.419 plugin-container[33416:1292896] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:36:21.419 plugin-container[33416:1292897] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:36:21.419 plugin-container[33416:1292897] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+1697535538349	geckodriver	INFO	Listening on 127.0.0.1:52685
+1697535538874	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "52686" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileanGsbo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697535539276	Marionette	INFO	Marionette enabled
+2023-10-17 11:38:59.406 plugin-container[33447:1293890] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:38:59.406 plugin-container[33447:1293890] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:38:59.408 plugin-container[33447:1293890] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:38:59.408 plugin-container[33447:1293890] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:38:59.409 plugin-container[33447:1293895] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:38:59.409 plugin-container[33447:1293895] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1697535539524	Marionette	INFO	Listening on port 52707
+WebDriver BiDi listening on ws://127.0.0.1:52686
+Read port: 52707
+1697535539745	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2023-10-17 09:39:00.759 plugin-container[33450:1294059] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:39:00.759 plugin-container[33450:1294059] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:39:00.761 plugin-container[33450:1294059] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:39:00.761 plugin-container[33450:1294059] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:39:00.762 plugin-container[33450:1294061] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:39:00.762 plugin-container[33450:1294061] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:52686/devtools/browser/3155045d-a511-4f3f-aae1-ff65eff207d9
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+1697535563722	Marionette	INFO	Stopped listening on port 52707
+JavaScript warning: https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js, line 2: Script terminated by timeout at:
+I/<@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:71177
+
+1697535705721	Marionette	INFO	Stopped listening on port 64771
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1697535740159	geckodriver	INFO	Listening on 127.0.0.1:55383
+1697535740682	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55384" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileefAvn6"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697535741087	Marionette	INFO	Marionette enabled
+2023-10-17 11:42:21.214 plugin-container[33501:1295416] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:42:21.215 plugin-container[33501:1295416] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:42:21.217 plugin-container[33501:1295416] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:42:21.217 plugin-container[33501:1295416] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:42:21.218 plugin-container[33501:1295414] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:42:21.218 plugin-container[33501:1295414] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+1697535741335	Marionette	INFO	Listening on port 55403
+WebDriver BiDi listening on ws://127.0.0.1:55384
+Read port: 55403
+1697535741568	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+2023-10-17 09:42:22.513 plugin-container[33504:1295588] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:42:22.513 plugin-container[33504:1295588] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:42:22.515 plugin-container[33504:1295588] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:42:22.515 plugin-container[33504:1295588] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:42:22.515 plugin-container[33504:1295587] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:42:22.515 plugin-container[33504:1295587] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:55384/devtools/browser/bac9d74d-6485-4714-9f51-2ff91a9ec3bd
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+JavaScript warning: https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js, line 2: Script terminated by timeout at:
+onUnload@https://cdn-eu.dynamicyield.com/scripts/1.201.0/dy-coll-nojq-min.js:2:84538
+
+1697535789359	geckodriver	INFO	Listening on 127.0.0.1:56038
+1697535789882	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56039" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/3b/m_mwz40s5td3bwqj715cdgdw0000gp/T/rust_mozprofileA9mWlN"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1697535790264	Marionette	INFO	Marionette enabled
+console.error: "Warning: unrecognized command line flag" "-remote-allow-hosts"
+2023-10-17 11:43:10.396 plugin-container[33531:1296065] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:43:10.396 plugin-container[33531:1296065] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:43:10.399 plugin-container[33531:1296065] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:43:10.399 plugin-container[33531:1296065] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 11:43:10.400 plugin-container[33531:1296063] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 11:43:10.400 plugin-container[33531:1296063] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1697535790421	Marionette	INFO	Listening on port 56056
+WebDriver BiDi listening on ws://127.0.0.1:56039
+Read port: 56056
+1697535790631	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56039/devtools/browser/c72e2fa8-7a9e-45e7-9317-8522a7466221
+2023-10-17 09:43:11.587 plugin-container[33534:1296221] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:43:11.588 plugin-container[33534:1296221] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:43:11.592 plugin-container[33534:1296221] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:43:11.592 plugin-container[33534:1296221] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-10-17 09:43:11.592 plugin-container[33534:1296223] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-10-17 09:43:11.592 plugin-container[33534:1296223] nil host used in call to allowsAnyHTTPSCertificateForHost:
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://www.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://login.coop.se."
+1697535814556	Marionette	INFO	Stopped listening on port 56056
+JavaScript warning: https://www.coop.se/Assets/Build/coopse.script.storesApp.7410a8b0.js, line 2: Script terminated by timeout at:
+72408/h.prototype.setState@https://www.coop.se/Assets/Build/coopse.script.storesApp.7410a8b0.js:2:351232
+68133/value/this.animationClassesTimeoutID<@https://www.coop.se/Assets/Build/coopse.script.2817.c1458a98.chunk.js:1:4665
+
+1697535893103	Marionette	INFO	Stopped listening on port 50698
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1697535895526	Marionette	INFO	Stopped listening on port 55403
