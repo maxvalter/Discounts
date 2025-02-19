@@ -28,28 +28,31 @@ cookietrust = driver.find_element(By.XPATH, '//*[@id="onetrust-reject-all-handle
 cookietrust.click()
 
 time.sleep(2)
-choosestore = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[4]/main/section/div[1]/div/div[1]/div[1]/div/div[2]/p[3]/button')
+choosestore_button_xpath = './/button[text()="Välj butik"]'
+choosestore = driver.find_element(By.XPATH, choosestore_button_xpath)
 choosestore.click()
 
-searchstores = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[4]/main/section/div[1]/div/div[1]/div/div/div/div/div/div[1]/div/input')
+search_input_xpath = './/input[contains(@placeholder, "Sök efter din butik")]'
+searchstores = driver.find_element(By.XPATH, search_input_xpath)
 searchstores.send_keys('Johanneberg')
 
 time.sleep(1)
 
 #store = driver.find_element_by_xpath('//*[@id="__next"]/div/div[3]/main/section/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/ul/li/div/div[1]')
-store = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[4]/main/section/div[1]/div/div[1]/div/div/div/div/div/div[2]/div/ul/li[1]')
+li_xpath = './/li[@role="option"]'
+store = driver.find_element(By.XPATH, li_xpath)
 store.click()
 
 time.sleep(2)
 
-showmore = driver.find_element(By.XPATH, '/html/body/div[1]/div/div[4]/main/section/div[1]/div/div[2]/div/div/div[3]/div/button')
+showmore_button_xpath = './/button[@data-testid="load-more-btn"]'
+showmore = driver.find_element(By.XPATH, showmore_button_xpath)
 showmore.click()
 
 driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 
 time.sleep(4)
-
-grid_xpath = '/html/body/div[1]/div/div[4]/main/section/div[1]/div/div[2]/div/div/div[2]'
+grid_xpath = './/div[@data-testid="grid"]'
 
 
 #Relative to grid_xpath

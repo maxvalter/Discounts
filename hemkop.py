@@ -74,6 +74,6 @@ for i in product_elements:
     writer.writerow(product_data)
     print(product_data, "\n")
 
-# driver.quit()
+driver.quit()
 time_end = time.time()
 print('\nRuntime: ', time_end-time_start)
