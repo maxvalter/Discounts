@@ -1,2 +1,9 @@
 /output
 demo.py
+__pycache__
+__pycache__/coop.cpython-39.pyc
+__pycache__/hemkop.cpython-39.pyc
+__pycache__/willys.cpython-39.pyc
+venv
+geckodriver.log
+.vscode
