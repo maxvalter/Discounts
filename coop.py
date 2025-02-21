@@ -76,7 +76,9 @@ def write_from_grid(grid):
     writer.writerows(data)
 
 options = Options()
-options.headless = False
+options.add_argument("--headless")  # Explicitly add headless mode
+options.add_argument("--disable-gpu")  # Sometimes needed for headless mode
+
 
 driver = webdriver.Firefox(options=options)
 driver.get('https://www.coop.se/butiker-erbjudanden/coop/coop-mariagatan/')
@@ -163,30 +165,37 @@ output = open('output/coop_promos' + '_w' + str(weeknumber) + '.csv', 'w')
 writer = csv.writer(output)
 
 
-#
 other_grids = '/html/body/main/div[2]/div/div[3]/div'
 grids = driver.find_elements(by=By.XPATH, value=other_grids)
-
-#Relative to grids
 
 #Paths
 
 for grid in grids:
+
+    #Click 'show more' if it exists
+    try:
+        show_more_xpath = './div[3]/button'
+        show_more = grid.find_element(by=By.XPATH, value=show_more_xpath)
+        show_more.click()
+    except:
+        pass    
+
+    #Find grid elements, generalized css selector
     children_css_selector = 'div.Section:nth-child(3) > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div'
-    
     grid_childrens = grid.find_elements(by=By.CSS_SELECTOR, value=children_css_selector)
 
+    #Paths relative to grid element
     title_xpath = './article/div/div[2]/div[1]/h3'
     price_xpath = './article/div/div[1]/div[3]/div/div/div[1]/div'
+
     #Filter out gridchildrens without text
     grid_childrens = [i for i in grid_childrens if i.text != '']
-
 
     for article in grid_childrens:
         title = article.find_element(by=By.XPATH, value=title_xpath).text.replace('\n', ' ')
         price = article.find_element(by=By.XPATH, value=price_xpath).text.replace('\n', ' ')
-        data = {'title': title, 'price': price}
-        print(data['title'], data['price'])
+        data = [title, price]
+        print(data[0], data[1])
         writer.writerow(data)
 
 
